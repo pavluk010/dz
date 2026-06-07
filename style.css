@@ -1,0 +1,240 @@
+
+/* 1 ЗАВДАННЯ */
+
+.img{
+    width: 250px;
+    height: 200px;
+    margin-left: 40px;
+    margin-top: 40px;
+
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img:hover{
+transform: scale(1.05);
+
+
+}
+
+.mail{
+    text-decoration: none;
+color: yellowgreen;
+
+top: 10px;
+}
+
+.tel{
+     text-decoration: none;
+color: red;
+
+top: 10px;
+}
+
+
+
+
+/* 2 ЗАВДАННЯ */
+
+.gallery-item{
+   margin-left: 40px;
+     
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-main:hover{
+transform: rotate(3deg) scale(1.1);
+}
+
+.gallery:hover{
+     filter: brightness(1)
+}
+
+.gallery-item:not(:hover){
+     filter: brightness(0.7)
+}
+
+
+
+/* 3 ЗАВДАННЯ */
+
+
+.second-gallery{
+width: 250px;
+height: 350px;
+    position: relative;
+
+         transition: transform 400ms ease, box-shadow 400ms ease;
+}
+
+.second-gallery:hover{
+      transform: translateY(-10px) scale(1.03);
+  
+}
+
+
+.second-img{
+    
+    margin-top: 50px;
+    margin-left: 50px;
+    position: absolute;
+    
+  
+}
+
+.name-project{
+margin-left: 50px;
+       position: relative;
+       color: red;
+bottom: -60px; 
+}
+
+.peshka{
+    margin-left: 50px;
+       position: relative;
+       color: red;
+bottom: -60px; 
+}
+
+.button{
+     margin-left: 50px;
+       position: relative;
+       color: red;
+bottom: -60px; 
+background-color: aqua;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+}
+
+
+
+/* 4 ЗАВДАННЯ */
+
+
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.modal{
+    width: 528.0px;
+    height: 581.0px;
+    background-color: antiquewhite;
+    box-shadow: 0 1px 4px 0 rgba(red, green, blue, alpha);
+  position: relative;
+}
+
+
+
+
+.modal-close{
+    
+     position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn{
+    border: none;
+    border-radius: 10px;
+    background-color: burlywood;
+    cursor: pointer;
+   margin-left: 30px; 
+}
+
+.modal-items{
+    margin-left: 30px;
+}
+
+.price{
+        margin-left: 30px;
+
+}
+
+
+.header-btn{
+    display: inline-block;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 10px;
+    border: none;
+    
+
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* BACKDROP */
+.backdrop{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,0.5);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: opacity 400ms ease, visibility 400ms ease;
+}
+
+.backdrop.is-open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* MODAL */
+.modal{
+    width: 520px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+
+    transform: translateY(-100px);
+    opacity: 0;
+
+    transition: transform 400ms ease, opacity 400ms ease;
+}
+
+.backdrop.is-open .modal{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* CLOSE BUTTON */
+.modal-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+}
