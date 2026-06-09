@@ -16,4 +16,4 @@
       backdrop.classList.remove("is-open");
     }
   });
-})();
+})(); 
